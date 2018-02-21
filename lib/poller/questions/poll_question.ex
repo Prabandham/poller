@@ -8,6 +8,7 @@ defmodule Poller.Questions.PollQuestion do
   @foreign_key_type :binary_id
   schema "question" do
     field :content, :string
+    field :tags, {:array, :string}
     belongs_to :user, Poller.Auth.User
 
     timestamps()
@@ -16,8 +17,8 @@ defmodule Poller.Questions.PollQuestion do
   @doc false
   def changeset(%PollQuestion{} = poll_question, attrs) do
     poll_question
-    |> cast(attrs, [:content, :user_id])
-    |> validate_required([:content, :user_id])
+    |> cast(attrs, [:content, :user_id, :tags])
+    |> validate_required([:content, :user_id, :tags])
     |> unique_constraint(:content)
   end
 end
