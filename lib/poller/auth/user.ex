@@ -26,6 +26,7 @@ defmodule Poller.Auth.User do
     |> validate_required([:username, :email, :password])
     |> unique_constraint(:username)
     |> unique_constraint(:email)
+    |> validate_length(:password, min: 8)
     |> validate_format(:email, ~r/@/)
     |> generate_hash_password
     |> generate_verification_code
