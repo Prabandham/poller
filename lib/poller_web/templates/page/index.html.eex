@@ -1,5 +1,39 @@
-<div class="row">
-  <div class="col-sm-12 home-page">
-    <h1> This is a test to see how this will load</h1>
-  </div>
-</div>
+<section class="mbr-section mbr-section-hero mbr-section-full mbr-section-with-arrow mbr-parallax-background" id="header1-0" data-rv-view="7" style="background-image: url(/images/mbr-810x1080.jpg);">
+
+    <div class="mbr-overlay" style="opacity: 0.5; background-color: rgb(0, 0, 0);"></div>
+
+    <div class="mbr-table-cell">
+
+        <div class="container">
+            <div class="row">
+                <div class="mbr-section col-md-6 col-md-offset-1 text-xs-center">
+                    <h1 class="mbr-section-title display-1">Poller</h1>
+                    <p class="mbr-section-lead lead">A Simple polling Application, to express our needs</p>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="mbr-section-btn"><a class="btn btn-lg btn-primary" href="#">Login</a>
+                  <%= form_for @conn, auth_path(@conn, :new), [as: :login], fn f -> %>
+                    <div class="form-group">
+                      <%= text_input f, :login, class: 'form-control', placeholder: 'Username or Email' %>
+                      <br />
+                      <%= password_input f, :password, class: 'form-control', placeholder: 'Password' %>
+                    </div>
+                  <% end %>
+                  <center> (Or) </center>
+                  <hr />
+                  <a class="btn btn-lg btn-white btn-white-outline" href="#">Sign Up</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mbr-arrow mbr-arrow-floating" aria-hidden="true"><a href="#footer1-1"><i class="mbr-arrow-icon"></i></a></div>
+
+</section>
+
+<footer class="mbr-small-footer mbr-section mbr-section-nopadding" id="footer1-1" data-rv-view="12" style="background-color: rgb(50, 50, 50); padding-top: 1.75rem; padding-bottom: 1.75rem;">
+    <div class="container text-xs-center">
+        <p>Copyright (c) 2018-19 Larks.</p>
+    </div>
+</footer>

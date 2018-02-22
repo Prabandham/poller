@@ -19,3 +19,18 @@ import "phoenix_html"
 // paths "./socket" or full ones "web/static/js/socket".
 
 // import socket from "./socket"
+
+$(document).ready(function() {
+    // First initialize bootstrap Material Design
+    $('body').bootstrapMaterialDesign();
+
+    // If it is the Home page then set the width of the div to that of the page.
+    if($(".home-page").length == 1) {
+        var height = $(window).height();
+        $(".home-page").height(height);
+    }
+    $(window).resize(function() {
+        var height = $(window).height();
+        $(".home-page").height(height);
+    });
+});
