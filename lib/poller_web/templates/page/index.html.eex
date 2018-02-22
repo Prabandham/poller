@@ -12,7 +12,7 @@
                 </div>
 
                 <div class="col-md-6">
-                  <div class="mbr-section-btn"><a class="btn btn-lg btn-primary" href="#">Login</a>
+                  <div class="mbr-section-btn"><p class="btn btn-lg btn-primary">Login</p>
                   <%= form_for @conn, auth_path(@conn, :new), [as: :login], fn f -> %>
                     <div class="form-group">
                       <%= text_input f, :login, class: 'form-control', placeholder: 'Username or Email' %>
@@ -22,7 +22,7 @@
                   <% end %>
                   <center> (Or) </center>
                   <hr />
-                  <a class="btn btn-lg btn-white btn-white-outline" href="#">Sign Up</a></div>
+                  <a class="btn btn-lg btn-white btn-white-outline" id="signup-button" href="#">Sign Up</a></div>
                 </div>
             </div>
         </div>
