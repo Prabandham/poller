@@ -27,7 +27,7 @@ defmodule Poller.Auth.User do
     |> unique_constraint(:username)
     |> unique_constraint(:email)
     |> validate_length(:password, min: 8)
-    |> validate_format(:email, ~r/@/)
+    |> validate_format(:email, ~r/@/, message: "Should be a valid Email ID")
     |> generate_hash_password
     |> generate_verification_code
     # |> send_verification_mailer #May be it is better to do this in the controller and this can be a background job.
@@ -41,6 +41,7 @@ defmodule Poller.Auth.User do
   end
 
   def validate(login, password) do
+    login = String.downcase(login)
     user = User
     |> Ecto.Query.where(email: ^login)
     |> Ecto.Query.or_where(username: ^login)

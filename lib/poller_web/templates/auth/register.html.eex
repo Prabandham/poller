@@ -1,0 +1,22 @@
+<div class="container">
+    <div id='registration-form' class=''> <%= form_for @changeset, auth_path(@conn, :new_registration), fn f -> %>
+        <div class='form-group'>
+        <%= text_input f, :username, class: 'form-control', placeholder: 'Username' %>
+        <%= error_tag f, :username %>
+        <br />
+        <%= text_input f, :email, class: 'form-control', placeholder: 'Email ID' %>
+        <%= error_tag f, :email %>
+        <br />
+        <%= password_input f, :password, class: 'form-control', placeholder: 'Password' %>
+        <%= error_tag f, :password %>
+        <br />
+        <center><%= submit "Register", class: 'btn btn-lg btn-success' %></center>
+    </div>
+        <% end %>
+        <center class='text-white'> (Already Have an Account ?) </center>
+        <hr />
+        <center>
+            <a class="btn btn-lg btn-white" href="/login" id='show-login-form'>Login</a>
+        </center>
+    </div>
+</div>

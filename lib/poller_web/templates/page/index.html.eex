@@ -13,42 +13,6 @@
 
                 <div class="col-md-6">
 
-                    <div id='login-form'>
-                        <%= form_for @conn, auth_path(@conn, :new), [as: :login], fn f -> %>
-                            <div class="form-group">
-                            <%= text_input f, :login, class: 'form-control', placeholder: 'Username or Email' %>
-                            <br />
-                            <%= password_input f, :password, class: 'form-control', placeholder: 'Password' %>
-                            <br />
-                            <center><%= submit "Login", class: 'btn btn-lg btn-success' %></center>
-                            </div>
-                        <% end %>
-                        <center class='text-white'> (Or) </center>
-                        <hr />
-                        <center>
-                            <a class="btn btn-lg btn-white" href="#" id='show-reg-form'>Sign Up</a>
-                        </center>
-                    </div>
-
-                    <div id='registration-form' class='hidden'>
-                        <%= form_for @changeset, auth_path(@conn, :new_registration), fn f -> %>
-                            <div class='form-group'>
-                                <%= text_input f, :username, class: 'form-control', placeholder: 'Username' %>
-                                <br />
-                                <%= text_input f, :email, class: 'form-control', placeholder: 'Email ID' %>
-                                <br />
-                                <%= password_input f, :password, class: 'form-control', placeholder: 'Password' %>
-                                <br />
-                                <center><%= submit "Register", class: 'btn btn-lg btn-success' %></center>
-                            </div>
-                        <% end %>
-                        <center class='text-white'> (Already Have an Account ?) </center>
-                        <hr />
-                        <center>
-                            <a class="btn btn-lg btn-white" href="#" id='show-login-form'>Login</a>
-                        </center>
-                    </div>
-
                 </div>
             </div>
         </div>

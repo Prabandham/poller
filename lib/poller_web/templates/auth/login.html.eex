@@ -1,0 +1,18 @@
+<div class="container">
+    <div id='login-form'>
+        <%= form_for @conn, auth_path(@conn, :new), [as: :login], fn f -> %>
+            <div class="form-group">
+            <%= text_input f, :login, class: 'form-control', placeholder: 'Username or Email' %>
+            <br />
+            <%= password_input f, :password, class: 'form-control', placeholder: 'Password' %>
+            <br />
+            <center><%= submit "Login", class: 'btn btn-lg btn-success' %></center>
+            </div>
+        <% end %>
+        <center class='text-white'> (Or) </center>
+        <hr />
+        <center>
+            <a class="btn btn-lg btn-white" href="/register" id='show-reg-form'>Sign Up</a>
+        </center>
+    </div>
+</div>

@@ -974,7 +974,10 @@ h6,
     line-height: 1.5;
     margin-bottom: 1.875rem;
     padding: 1.25rem;
-    position: relative; }
+    position: relative; 
+    width: 99%;
+    text-align: center;
+  }
     .alert.alert-form:after {
       background-color: inherit;
       bottom: -7px;
@@ -2594,4 +2597,13 @@ h6,
       padding: 0;
       top: 0;
       left: -2400px;
+  }
+
+  #regisration-form {
+    margin-top: -350px;
+  }
+  
+  .help-block {
+    color: red;
+    font-size: 11px;
   }

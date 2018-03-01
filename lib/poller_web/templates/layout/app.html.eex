@@ -13,14 +13,16 @@
   </head>
 
   <body>
-    <div class="row">
-      <%= if get_flash(@conn, :info) do %>
-        <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
-      <% end %>
-      <%= if get_flash(@conn, :error) do %>
-        <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
-      <% end %>
-      <%= render @view_module, @view_template, assigns %>
+      <div class="container">
+        <div class="row">
+          <%= if get_flash(@conn, :info) do %>
+            <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
+          <% end %>
+          <%= if get_flash(@conn, :error) do %>
+            <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
+          <% end %>
+        <%= render @view_module, @view_template, assigns %>
+      </div>
     </div>
     <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
   </body>
