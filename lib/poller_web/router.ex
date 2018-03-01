@@ -17,7 +17,8 @@ defmodule PollerWeb.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
-    get "/auth/new", AuthController, :new
+    post "/auth/new", AuthController, :new
+    post "/new/registration", AuthController, :new_registration
   end
 
   # Other scopes may use custom stacks.

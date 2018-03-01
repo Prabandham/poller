@@ -33,4 +33,14 @@ $(document).ready(function() {
         var height = $(window).height();
         $(".home-page").height(height);
     });
+
+    //Toggle between Login and Register divs
+    $('#show-reg-form').on('click', function() {
+        $('#login-form').toggleClass('hidden');
+        $('#registration-form').toggleClass('hidden');
+    })
+    $('#show-login-form').on('click', function() {
+        $('#registration-form').toggleClass('hidden');
+        $('#login-form').toggleClass('hidden');
+    })
 });

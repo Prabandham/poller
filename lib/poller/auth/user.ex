@@ -20,7 +20,7 @@ defmodule Poller.Auth.User do
   end
 
   @doc false
-  def new_changeset(%User{} = user, attrs) do
+  def new_changeset(%User{} = user, attrs \\ %{}) do
     user
     |> cast(attrs, [:username, :email, :password])
     |> validate_required([:username, :email, :password])
@@ -49,16 +49,22 @@ defmodule Poller.Auth.User do
   end
 
   defp generate_hash_password(changeset) do
-    %{password_hash: hashed_password} = Comeonin.Argon2.add_hash(changeset.changes.password)
-    changeset
-    |> put_change(:hash_password, hashed_password)
-    |> put_change(:password, "")
+    case get_change(changeset, :password) do
+      nil -> changeset
+      _ -> %{password_hash: hashed_password} = Comeonin.Argon2.add_hash(changeset.changes.password)
+            changeset
+            |> put_change(:hash_password, hashed_password)
+            |> put_change(:password, "")
+    end
   end
 
   defp generate_verification_code(changeset) do
-    code = Poller.Utilities.RandomTextGenerator.make(8)
-    changeset
-    |> put_change(:verification_code, code)
+    case get_change(changeset, :email) do
+      nil -> changeset
+      _ -> code = Poller.Utilities.RandomTextGenerator.make(8)
+                  changeset
+                  |> put_change(:verification_code, code)
+    end
   end
 
   defp send_verification_mailer(changeset) do
