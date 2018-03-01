@@ -4,7 +4,6 @@ defmodule PollerWeb.AuthController do
   plug :scrub_params, "login" when action in [:new]
   plug :scrub_params, "user" when action in [:new_registration]
 
-
   def login(conn, _params) do
     changeset = Poller.Auth.User.new_changeset(%Poller.Auth.User{})
     conn

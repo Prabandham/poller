@@ -3,11 +3,6 @@
   <component name="CompassSettings">
     <option name="compassExecutableFilePath" value="$USER_HOME$/.rbenv/versions/2.1.6/lib/ruby/gems/2.1.0/gems/compass-1.0.3/bin/compass" />
   </component>
-  <component name="FacetManager">
-    <facet type="Elixir" name="Elixir facet">
-      <configuration sdkName="" />
-    </facet>
-  </component>
   <component name="ModuleRunConfigurationManager">
     <shared />
   </component>
@@ -15,5 +10,6 @@
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" scope="PROVIDED" name="Elixir SDK" level="project" />
   </component>
 </module>
