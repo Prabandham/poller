@@ -11,6 +11,16 @@ Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
 Ready to run in production? Please [check our deployment guides](http://www.phoenixframework.org/docs/deployment).
 
+# Development Environment setup.
+
+
+* Install Elixir and Phoneinx
+* Install IntelliJ CM edition.
+* Install the Elixir Plugin.
+* Import project and select this folder on the filesystem.
+* Run through the setup and when it asks to configure the SDK Choose Elixir and setup the appropriate mix and Elixir paths.
+*
+
 ## Learn more
 
   * Official website: http://www.phoenixframework.org/
@@ -18,3 +28,5 @@ Ready to run in production? Please [check our deployment guides](http://www.phoe
   * Docs: https://hexdocs.pm/phoenix
   * Mailing list: http://groups.google.com/group/phoenix-talk
   * Source: https://github.com/phoenixframework/phoenix
+
+

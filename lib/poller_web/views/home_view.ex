@@ -1,3 +1,3 @@
 defmodule PollerWeb.HomeView do
-    use PollerWeb, :view
+  use PollerWeb, :view
 end

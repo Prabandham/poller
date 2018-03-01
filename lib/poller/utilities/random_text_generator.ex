@@ -26,7 +26,7 @@ defmodule Poller.Utilities.RandomTextGenerator do
           true -> alphabets <> String.downcase(alphabets) <> numbers
         end
         |> String.split("", trim: true)
-  
+
       do_randomizer(length, lists)
     end
   

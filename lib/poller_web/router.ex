@@ -10,7 +10,7 @@ defmodule PollerWeb.Router do
   end
 
   pipeline :check_auth do
-    plug PollerWeb.Plugs.CheckAuth#, repo: Poller.Repo
+    plug PollerWeb.Plugs.CheckAuth
   end
 
   pipeline :api do

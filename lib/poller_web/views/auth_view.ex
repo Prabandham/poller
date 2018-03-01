@@ -1,3 +1,3 @@
 defmodule PollerWeb.AuthView do
-    use PollerWeb, :view
+  use PollerWeb, :view
 end
