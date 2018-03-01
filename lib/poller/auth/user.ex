@@ -43,9 +43,9 @@ defmodule Poller.Auth.User do
   def validate(login, password) do
     login = String.downcase(login)
     user = User
-    |> Ecto.Query.where(email: ^login)
-    |> Ecto.Query.or_where(username: ^login)
-    |> Poller.Repo.one
+           |> Ecto.Query.where(email: ^login)
+           |> Ecto.Query.or_where(username: ^login)
+           |> Poller.Repo.one
     Comeonin.Argon2.check_pass(user, password, [hash_key: :hash_password])
   end
 
@@ -53,9 +53,9 @@ defmodule Poller.Auth.User do
     case get_change(changeset, :password) do
       nil -> changeset
       _ -> %{password_hash: hashed_password} = Comeonin.Argon2.add_hash(changeset.changes.password)
-            changeset
-            |> put_change(:hash_password, hashed_password)
-            |> put_change(:password, "")
+           changeset
+           |> put_change(:hash_password, hashed_password)
+           |> put_change(:password, "")
     end
   end
 
@@ -63,8 +63,8 @@ defmodule Poller.Auth.User do
     case get_change(changeset, :email) do
       nil -> changeset
       _ -> code = Poller.Utilities.RandomTextGenerator.make(8)
-                  changeset
-                  |> put_change(:verification_code, code)
+           changeset
+           |> put_change(:verification_code, code)
     end
   end
 
