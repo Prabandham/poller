@@ -346,6 +346,9 @@ h6,
 .text-danger {
   color: #f28281 !important;
 }
+.text-white {
+  color: white;
+}
 .alert-success {
   background-color: #90a878;
 }
@@ -1044,7 +1047,7 @@ h6,
   
   .mbr-section {
     position: relative;
-    padding-top: 120px;
+    padding-top: 35px;
     padding-bottom: 120px;
     background-position: 50% 50%;
     background-repeat: no-repeat;
@@ -1978,7 +1981,10 @@ h6,
     background: #323232;
     color: #acacac;
     font-size: 0.8125rem;
-    padding: 1.75rem 0; }
+    padding: 1.75rem 0; 
+    width: 100%;
+    text-align: center;
+  }
     .mbr-small-footer p {
       margin-bottom: 0; }
   
