@@ -9,7 +9,15 @@ defmodule PollerWeb.Plugs.CheckAuth do
   def call(conn, opts) do
     current_user = get_session(conn, :current_user)
     if current_user do
-      assign(conn, :current_user, current_user)
+      IO.puts conn.request_path
+      case conn.request_path do
+        "/login" ->
+          conn |> put_flash(:info, "Already Logged in.") |> redirect(to: "/home")
+        "/register" ->
+          conn |> put_flash(:info, "Already Registerd.") |> redirect(to: "/home")
+        _ ->
+            assign(conn, :current_user, current_user)
+      end
     else
       conn
       |> put_flash(:error, "You need to be signed in to access that page.")

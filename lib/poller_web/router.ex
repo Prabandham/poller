@@ -19,7 +19,7 @@ defmodule PollerWeb.Router do
 
   # This will have all non logged in routes.
   scope "/", PollerWeb do
-    pipe_through :browser # Use the default browser stack
+    pipe_through [:browser, :check_auth] # Use the default browser stack
 
     get "/",                    PageController,   :index
 
@@ -28,12 +28,6 @@ defmodule PollerWeb.Router do
     get "/register",            AuthController,   :register
     post "/auth/new",           AuthController,   :new
     post "/new/registration",   AuthController,   :new_registration
-  end
-
-  # This will handle all logged in routes
-  scope "/", PollerWeb do
-    pipe_through [:browser, :check_auth]
-
 
     # Main Application
     get "/home",                HomeController,   :index
