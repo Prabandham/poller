@@ -24,6 +24,12 @@ $(document).ready(function() {
     // First initialize bootstrap Material Design
     $('body').bootstrapMaterialDesign();
 
+    // Remove container from landing page.
+    if (window.location.href.split("/").pop() != "") {
+        $($("body div:first-child")).removeClass("container-fluid");
+        $($("body div:first-child")).addClass("container");
+    }
+
     // If it is the Home page then set the width of the div to that of the page.
     if($(".home-page").length == 1) {
         var height = $(window).height();
@@ -38,9 +44,9 @@ $(document).ready(function() {
     $('#show-reg-form').on('click', function() {
         $('#login-form').toggleClass('hidden');
         $('#registration-form').toggleClass('hidden');
-    })
+    });
     $('#show-login-form').on('click', function() {
         $('#registration-form').toggleClass('hidden');
         $('#login-form').toggleClass('hidden');
-    })
+    });
 });

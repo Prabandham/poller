@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a17d5b1f-20ae-45ee-8f95-2202601d5b3b" name="Default" comment="c">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/lib/poller_web/plugs/check_auth.ex" afterPath="$PROJECT_DIR$/lib/poller_web/plugs/check_auth.ex" />
-      <change beforePath="$PROJECT_DIR$/lib/poller_web/router.ex" afterPath="$PROJECT_DIR$/lib/poller_web/router.ex" />
+      <change beforePath="$PROJECT_DIR$/assets/css/app.css" afterPath="$PROJECT_DIR$/assets/css/app.css" />
+      <change beforePath="$PROJECT_DIR$/assets/js/app.js" afterPath="$PROJECT_DIR$/assets/js/app.js" />
+      <change beforePath="$PROJECT_DIR$/lib/poller_web/templates/layout/app.html.eex" afterPath="$PROJECT_DIR$/lib/poller_web/templates/layout/app.html.eex" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,11 +26,53 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="check_auth.ex" pinned="false" current-in-tab="true">
+      <file leaf-file-name="check_auth.ex" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/poller_web/plugs/check_auth.ex">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="240">
               <caret line="16" column="79" lean-forward="false" selection-start-line="16" selection-start-column="79" selection-end-line="16" selection-end-column="79" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html.eex" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/poller_web/templates/page/index.html.eex">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="n#style#0;n#section#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.html.eex" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/poller_web/templates/layout/app.html.eex">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" column="32" lean-forward="false" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/assets/js/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/css/app.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="422" column="0" lean-forward="false" selection-start-line="422" selection-start-column="0" selection-end-line="422" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -52,6 +94,9 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/lib/poller_web/router.ex" />
         <option value="$PROJECT_DIR$/lib/poller_web/plugs/check_auth.ex" />
+        <option value="$PROJECT_DIR$/assets/css/app.css" />
+        <option value="$PROJECT_DIR$/lib/poller_web/templates/layout/app.html.eex" />
+        <option value="$PROJECT_DIR$/assets/js/app.js" />
       </list>
     </option>
   </component>
@@ -93,6 +138,24 @@
             <path>
               <item name="poller" type="b2602c69:ProjectViewProjectNode" />
               <item name="poller" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="poller" type="b2602c69:ProjectViewProjectNode" />
+              <item name="poller" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="poller" type="b2602c69:ProjectViewProjectNode" />
+              <item name="poller" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="poller" type="b2602c69:ProjectViewProjectNode" />
+              <item name="poller" type="462c0819:PsiDirectoryNode" />
               <item name="lib" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -127,7 +190,7 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
-    <property name="SearchEverywhereHistoryKey" value="check&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/lib/poller_web/plugs/check_auth.ex&#10;router&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/lib/poller_web/router.ex&#10;user.&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/lib/poller/auth/user.ex" />
+    <property name="SearchEverywhereHistoryKey" value="app.html&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/lib/poller_web/templates/layout/app.html.eex&#10;index.html.eex&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/lib/poller_web/templates/page/index.html.eex&#10;app.css&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/assets/css/app.css&#10;app.js&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/assets/js/app.js&#10;check&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/lib/poller_web/plugs/check_auth.ex&#10;router&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/lib/poller_web/router.ex&#10;user.&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/lib/poller/auth/user.ex" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RunDashboard">
@@ -561,10 +624,52 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/assets/vendor/css/bootstrap-material-design.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-291">
+          <caret line="7" column="783" lean-forward="false" selection-start-line="7" selection-start-column="783" selection-end-line="7" selection-end-column="783" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/app.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="422" column="0" lean-forward="false" selection-start-line="422" selection-start-column="0" selection-end-line="422" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lib/poller_web/plugs/check_auth.ex">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="16" column="79" lean-forward="false" selection-start-line="16" selection-start-column="79" selection-end-line="16" selection-end-column="79" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/poller_web/templates/page/index.html.eex">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#section#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/poller_web/templates/layout/app.html.eex">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="32" lean-forward="false" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
           <folding />
         </state>
       </provider>
