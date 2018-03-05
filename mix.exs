@@ -20,7 +20,7 @@ defmodule Poller.Mixfile do
   def application do
     [
       mod: {Poller.Application, []},
-      extra_applications: [:logger, :runtime_tools, :con_cache]
+      extra_applications: [:logger, :runtime_tools, :con_cache, :faker]
     ]
   end
 
@@ -44,6 +44,7 @@ defmodule Poller.Mixfile do
       {:comeonin, "~> 4.0"},
       {:argon2_elixir, "~> 1.2"},
       {:con_cache, "~> 0.12.1"},
+      {:faker, "~> 0.9"},
     ]
   end
 
