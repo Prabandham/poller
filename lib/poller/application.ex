@@ -14,6 +14,8 @@ defmodule Poller.Application do
       supervisor(PollerWeb.Endpoint, []),
       # Start your own worker by calling: Poller.Worker.start_link(arg1, arg2, arg3)
       # worker(Poller.Worker, [arg1, arg2, arg3]),
+      # Start our cache server which is powered by ets via a libiary called con_cache.
+      supervisor(ConCache, [[], [name: :poller_cache]])
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

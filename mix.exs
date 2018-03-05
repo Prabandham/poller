@@ -4,7 +4,7 @@ defmodule Poller.Mixfile do
   def project do
     [
       app: :poller,
-      version: "0.0.1",
+      version: current_version(),
       elixir: "~> 1.6.1",
       elixirc_paths: elixirc_paths(Mix.env),
       compilers: [:phoenix, :gettext] ++ Mix.compilers,
@@ -20,7 +20,7 @@ defmodule Poller.Mixfile do
   def application do
     [
       mod: {Poller.Application, []},
-      extra_applications: [:logger, :runtime_tools]
+      extra_applications: [:logger, :runtime_tools, :con_cache]
     ]
   end
 
@@ -43,6 +43,7 @@ defmodule Poller.Mixfile do
       {:cowboy, "~> 1.0"},
       {:comeonin, "~> 4.0"},
       {:argon2_elixir, "~> 1.2"},
+      {:con_cache, "~> 0.12.1"},
     ]
   end
 
@@ -58,5 +59,15 @@ defmodule Poller.Mixfile do
       "ecto.reset": ["ecto.drop", "ecto.setup"],
       "test": ["ecto.create --quiet", "ecto.migrate", "test"]
     ]
+  end
+
+  defp current_version() do
+    # get git version
+    {description, 0} = System.cmd("git", ~w[describe]) # => returns something like: v1.0-231-g1c7ef8b
+    _git_version = String.strip(description)
+                   |> String.split("-")
+                   |> Enum.take(2)
+                   |> Enum.join(".")
+                   |> String.replace_leading("v", "")
   end
 end
