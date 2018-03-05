@@ -14,6 +14,10 @@
 
   <body>
       <div class="container-fluid">
+        <%= if logged_in?(@conn) do %>
+            <p class="text-muted text-center"><%= current_user(@conn).username %></p>
+        <% end %>
+
         <div class="row">
           <%= if get_flash(@conn, :info) do %>
             <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>

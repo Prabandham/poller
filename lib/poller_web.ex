@@ -39,6 +39,7 @@ defmodule PollerWeb do
 
       import PollerWeb.Router.Helpers
       import PollerWeb.ErrorHelpers
+      import PollerWeb.AppHelpers
       import PollerWeb.Gettext
     end
   end
