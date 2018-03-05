@@ -10,12 +10,13 @@ defmodule Poller.Questions.PollQuestion do
     field :content, :string
     field :tags, {:array, :string}
     belongs_to :user, Poller.Auth.User
+    has_many :answers, Poller.Answers.Answer
 
     timestamps()
   end
 
   @doc false
-  def changeset(%PollQuestion{} = poll_question, attrs) do
+  def changeset(%PollQuestion{} = poll_question, attrs \\ %{}) do
     poll_question
     |> cast(attrs, [:content, :user_id, :tags])
     |> validate_required([:content, :user_id, :tags])
