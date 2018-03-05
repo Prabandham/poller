@@ -67,7 +67,7 @@ defmodule Poller.Mixfile do
     _git_version = String.strip(description)
                    |> String.split("-")
                    |> Enum.take(2)
-                   |> Enum.join(".")
+                   |> Enum.join("+")
                    |> String.replace_leading("v", "")
   end
 end

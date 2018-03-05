@@ -44,4 +44,14 @@ defmodule PollerWeb.AuthController do
         |> render("register.html", changeset: changeset)
     end
   end
+
+  def logout(conn, _params) do
+    key = "current_user_" <> Plug.Conn.get_session(conn, :current_user)
+    ConCache.delete(:poller_cache,key)
+    conn
+    |> fetch_session
+    |> delete_session(:current_user)
+    |> put_flash(:info, "You were logged out Successfully !")
+    |> redirect(to: "/")
+  end
 end

@@ -16,6 +16,7 @@
       <div class="container-fluid">
         <%= if logged_in?(@conn) do %>
             <p class="text-muted text-center"><%= current_user(@conn).username %></p>
+            <%= link("Logout", to: "/logout") %>
         <% end %>
 
         <div class="row">

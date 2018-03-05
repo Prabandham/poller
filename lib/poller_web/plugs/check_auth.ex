@@ -6,10 +6,9 @@ defmodule PollerWeb.Plugs.CheckAuth do
 
   def init(opts), do: opts
 
-  def call(conn, opts) do
+  def call(conn, _opts) do
     current_user = get_session(conn, :current_user)
     if current_user do
-      IO.puts conn.request_path
       case conn.request_path do
         "/login" ->
           conn |> put_flash(:info, "Already Logged in.") |> redirect(to: "/home")
@@ -19,9 +18,13 @@ defmodule PollerWeb.Plugs.CheckAuth do
             assign(conn, :current_user, current_user)
       end
     else
-      conn
-      |> put_flash(:error, "You need to be signed in to access that page.")
-      |> redirect(to: "/login")
+      # User is not logged in so redirect him to login
+      # This could have been easily handled in the routes by creating a new pipeline.
+      # But I am doing it here as this is more explicit. And this also allows us to write all routes in one pipeline block
+      cond do
+        conn.request_path in ["/", "/login", "/register", "/auth/new", "/new_registration"] -> conn
+        true -> conn |> put_flash(:error, "Please Login First.") |> redirect(to: "/login")
+      end
     end
   end
 end
