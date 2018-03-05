@@ -33,9 +33,9 @@ if Enum.count(users) <= 10 do
 end
 
 questions = [
-              %{"Which is the better web development framework in 2017 ????" =>
+              %{"Which is the best web development framework in 2017 ????" =>
                 %{
-                    "answers" => ["Golang", "Elixir", "Ruby On Rails", "PHP", "Java"],
+                    "answers" => ["Golang", "Elixir-Phoenix", "Ruby On Rails", "PHP", "Play"],
                     "tags" => ["Development", "Comparision", "Web", "2018 Tech Stack"]
                 }
               },
@@ -52,6 +52,7 @@ questions = [
                  }
               },
             ]
+
 users = User |> Repo.all()
 
 # Create poll question with some answers.
