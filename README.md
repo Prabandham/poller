@@ -20,7 +20,7 @@ Ready to run in production? Please [check our deployment guides](http://www.phoe
 * Run through the setup and when it asks to configure the SDK Choose Elixir and setup the appropriate mix and Elixir paths.
 *
 
-## Deploymnet
+# Deploymnet
 
     For now nothing has been decided. But all deploys will be done based on tags. 
     This is important as the `mix version` for the application will be set based on that automatically. 
