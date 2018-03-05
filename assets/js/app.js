@@ -26,8 +26,9 @@ $(document).ready(function() {
 
     // Remove container from landing page.
     if (window.location.href.split("/").pop() != "") {
-        $($("body div:first-child")).removeClass("container-fluid");
-        $($("body div:first-child")).addClass("container");
+        $("#main-nav").removeClass("hidden");
+        $($("body > div")).removeClass("container-fluid");
+        $($("body > div")).addClass("container");
     }
 
     // If it is the Home page then set the width of the div to that of the page.

@@ -420,6 +420,10 @@ h6,
   font-family: 'Roboto', sans-serif;
 }
 
+#main-content {
+    margin-top: 2%;
+}
+
   .btn {
     margin-bottom: 0.5rem; }
     .btn + .btn {
