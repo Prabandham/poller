@@ -3,6 +3,7 @@ defmodule PollerWeb.PageController do
 
   def index(conn, _params) do
     conn
+    |> put_layout("landing.html")
     |> render("index.html")
   end
 end

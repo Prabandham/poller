@@ -24,13 +24,6 @@ $(document).ready(function() {
     // First initialize bootstrap Material Design
     $('body').bootstrapMaterialDesign();
 
-    // Remove container from landing page.
-    if (window.location.href.split("/").pop() != "") {
-        $("#main-nav").removeClass("hidden");
-        $($("body > div")).removeClass("container-fluid");
-        $($("body > div")).addClass("container");
-    }
-
     // If it is the Home page then set the width of the div to that of the page.
     if($(".home-page").length == 1) {
         var height = $(window).height();
