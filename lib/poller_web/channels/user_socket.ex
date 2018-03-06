@@ -3,6 +3,7 @@ defmodule PollerWeb.UserSocket do
 
   ## Channels
   # channel "room:*", PollerWeb.RoomChannel
+  channel "poll:*", PollerWeb.PollChannel
 
   ## Transports
   transport :websocket, Phoenix.Transports.WebSocket

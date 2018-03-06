@@ -53,10 +53,17 @@ let socket = new Socket("/socket", {params: {token: window.userToken}})
 
 socket.connect()
 
-// Now that you are connected, you can join channels with a topic:
-let channel = socket.channel("topic:subtopic", {})
-channel.join()
+// Start joining to the poll:home channel
+let home_channel = socket.channel("poll:home", {})
+window.home_channel = home_channel;
+home_channel.join()
   .receive("ok", resp => { console.log("Joined successfully", resp) })
   .receive("error", resp => { console.log("Unable to join", resp) })
 
+
+home_channel.push("shout", {})
+
+home_channel.on("shout", payload =>{
+    console.log("Got back response from server.")
+})
 export default socket
