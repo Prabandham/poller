@@ -1,27 +1,62 @@
 <!-- Button trigger modal -->
-<div class='row'>
-    <div class='col6'>
-        <h5>All Polls Today</h5>
-     </div>
+<div class="container">
+    <div class='row'>
+        <div class='col'>
+            <h5>All Polls Today</h5>
+         </div>
 
-    <div class='col6 pull-lg-right'>
-        <button type="button" class="btn btn-primary pull-xs-right" data-toggle="modal" data-target="#exampleModal">
-            New Poll
-        </button>
-     </div>
+         <div class='col'>
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+         </div>
+
+        <div class='col float-right' style="text-align:right;">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                New Poll
+            </button>
+         </div>
+    </div>
 </div>
 
-<div class="row">
-    <%= for poll <- @polls do %>
-        <div class="row">
-            <h6><%= poll.content %></h6>
-            <br />
-            <br />
-            <br />
-            <hr />
+<div class="container">
+    <div class="row">
+        <div class="card-columns">
+            <%= for poll <- @polls do %>
+                <div class="card">
+                  <div class="card-header">
+                    <blockquote class="blockquote mb-0">
+                        <h5> <%= poll.content %></h5>
+                        <footer class="blockquote-footer">
+                            <%= poll.user.username %>
+                        </footer>
+                        <%= for tag <- poll.tags do %>
+                            <span class="badge badge-primary text-small"><%= tag %></span>
+                        <% end %>
+                    </blockquote>
+                  </div>
+                  <div class="card-body">
+                    <div class="row">
+                        <%= for answer <- poll.answers do %>
+                            <div class="col-sm-6">
+                                <p class="card-text"><%= answer.content %></p>
+                                <span>
+                                    <div class="progress" style="height: 20px;">
+                                      <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </span>
+                            </div>
+                        <% end %>
+                    </div>
+                  </div>
+                </div>
+            <% end %>
         </div>
-        <br />
-    <% end %>
+    </div>
 </div>
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

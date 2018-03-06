@@ -6,9 +6,32 @@
 
 .help-block {
     color: red;
-    font-size: 11px;
+    font-size: 15px;
+    width: 100%;
 }
 
 #main-content {
     margin-top: 2%;
+}
+
+.card-columns {
+  @include media-breakpoint-only(lg) {
+    column-count: 4;
+  }
+  @include media-breakpoint-only(xl) {
+    column-count: 5;
+  }
+}
+
+.text-small {
+    font-size: 12px;
+}
+
+.progress {
+    margin-top: -15px;
+    margin-bottom: 10px;
+}
+
+.nowrap {
+  white-space: nowrap !important;
 }
