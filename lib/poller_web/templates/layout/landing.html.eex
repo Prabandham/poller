@@ -10,6 +10,7 @@
     <title>Poller - A polling application</title>
 
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
+    <link rel="stylesheet" href="https://srinidhiprabandham.github.io/static-assets/poller-landing-page.css" >
   </head>
 
   <body>

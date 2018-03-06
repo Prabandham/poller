@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a17d5b1f-20ae-45ee-8f95-2202601d5b3b" name="Default" comment="c">
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/poller_web/templates/layout/landing.html.eex" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/assets/js/app.js" afterPath="$PROJECT_DIR$/assets/js/app.js" />
-      <change beforePath="$PROJECT_DIR$/lib/poller_web/controllers/page_controller.ex" afterPath="$PROJECT_DIR$/lib/poller_web/controllers/page_controller.ex" />
+      <change beforePath="$PROJECT_DIR$/assets/css/app.css" afterPath="$PROJECT_DIR$/assets/css/app.css" />
+      <change beforePath="$PROJECT_DIR$/lib/poller_web/controllers/home_controller.ex" afterPath="$PROJECT_DIR$/lib/poller_web/controllers/home_controller.ex" />
+      <change beforePath="$PROJECT_DIR$/lib/poller_web/templates/home/index.html.eex" afterPath="$PROJECT_DIR$/lib/poller_web/templates/home/index.html.eex" />
       <change beforePath="$PROJECT_DIR$/lib/poller_web/templates/layout/app.html.eex" afterPath="$PROJECT_DIR$/lib/poller_web/templates/layout/app.html.eex" />
+      <change beforePath="$PROJECT_DIR$/lib/poller_web/templates/layout/landing.html.eex" afterPath="$PROJECT_DIR$/lib/poller_web/templates/layout/landing.html.eex" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,51 +32,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.html.eex" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html.eex" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/poller_web/templates/home/index.html.eex">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="16" column="12" lean-forward="false" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
+              <folding>
+                <element signature="e#1039#1046#1#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.html.eex" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/poller_web/templates/layout/app.html.eex">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="62" lean-forward="false" selection-start-line="16" selection-start-column="62" selection-end-line="16" selection-end-column="62" />
-              <folding />
+            <state relative-caret-position="435">
+              <caret line="48" column="16" lean-forward="false" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="16" />
+              <folding>
+                <element signature="e#1877#1883#0#HTML" expanded="true" />
+                <element signature="e#1900#1906#0#HTML" expanded="true" />
+                <element signature="e#1923#1929#0#HTML" expanded="true" />
+                <element signature="e#1946#1952#0#HTML" expanded="true" />
+                <element signature="e#1969#1975#0#HTML" expanded="true" />
+                <element signature="e#1992#1998#0#HTML" expanded="true" />
+                <element signature="e#2015#2021#0#HTML" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/js/app.js">
+      <file leaf-file-name="home_controller.ex" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/poller_web/controllers/home_controller.ex">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="26" column="4" lean-forward="false" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="landing.html.eex" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lib/poller_web/templates/layout/landing.html.eex">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="24" lean-forward="false" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="page_controller_test.exs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/poller_web/controllers/page_controller_test.exs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="23" lean-forward="false" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="page_controller.ex" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/poller_web/controllers/page_controller.ex">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="6" lean-forward="false" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+            <state relative-caret-position="105">
+              <caret line="7" column="44" lean-forward="false" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -102,8 +93,6 @@
         <option value="$PROJECT_DIR$/lib/poller_web/controllers/auth_controller.ex" />
         <option value="$PROJECT_DIR$/lib/poller_web/plugs/check_auth.ex" />
         <option value="$PROJECT_DIR$/lib/poller.ex" />
-        <option value="$PROJECT_DIR$/assets/css/app.css" />
-        <option value="$PROJECT_DIR$/lib/poller_web/templates/home/index.html.eex" />
         <option value="$PROJECT_DIR$/lib/poller/questions/poll_question.ex" />
         <option value="$PROJECT_DIR$/lib/poller/answers/answer.ex" />
         <option value="$PROJECT_DIR$/priv/repo/migrations/20180305091436_create_answers.exs" />
@@ -113,7 +102,11 @@
         <option value="$PROJECT_DIR$/priv/repo/seeds.exs" />
         <option value="$PROJECT_DIR$/lib/poller_web/controllers/page_controller.ex" />
         <option value="$PROJECT_DIR$/assets/js/app.js" />
+        <option value="$PROJECT_DIR$/assets/css/landing_page.css" />
         <option value="$PROJECT_DIR$/lib/poller_web/templates/layout/landing.html.eex" />
+        <option value="$PROJECT_DIR$/assets/css/app.css" />
+        <option value="$PROJECT_DIR$/lib/poller_web/controllers/home_controller.ex" />
+        <option value="$PROJECT_DIR$/lib/poller_web/templates/home/index.html.eex" />
         <option value="$PROJECT_DIR$/lib/poller_web/templates/layout/app.html.eex" />
       </list>
     </option>
@@ -155,6 +148,11 @@
             <path>
               <item name="poller" type="b2602c69:ProjectViewProjectNode" />
               <item name="poller" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="poller" type="b2602c69:ProjectViewProjectNode" />
+              <item name="poller" type="462c0819:PsiDirectoryNode" />
               <item name="lib" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -176,7 +174,7 @@
               <item name="lib" type="462c0819:PsiDirectoryNode" />
               <item name="poller_web" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="layout" type="462c0819:PsiDirectoryNode" />
+              <item name="home" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -190,7 +188,7 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
-    <property name="SearchEverywhereHistoryKey" value="app.&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/assets/js/app.js&#10;page&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/lib/poller_web/controllers/page_controller.ex&#10;mix&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/mix.exs&#10;user_vo&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/priv/repo/migrations/20180305100120_create_user_votes.exs&#10;see&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/priv/repo/seeds.exs&#10;answer&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/priv/repo/migrations/20180305091436_create_answers.exs&#10;home/index&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/lib/poller_web/templates/home/index.html.eex&#10;app.js&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/assets/js/app.js&#10;app.css&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/assets/css/app.css&#10;app&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/lib/poller_web/templates/layout/app.html.eex&#10;poller&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/lib/poller.ex&#10;chec&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/lib/poller_web/plugs/check_auth.ex&#10;check&#9;ACTION&#9;CheckinProject&#10;auth&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/lib/poller_web/controllers/auth_controller.ex&#10;route&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/lib/poller_web/router.ex&#10;rea&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/README.md&#10;p&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/lib/poller.ex&#10;app.html&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/lib/poller_web/templates/layout/app.html.eex&#10;index.html.eex&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/lib/poller_web/templates/page/index.html.eex&#10;router&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/lib/poller_web/router.ex&#10;user.&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/lib/poller/auth/user.ex" />
+    <property name="SearchEverywhereHistoryKey" value="app.&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/lib/poller_web/templates/layout/app.html.eex&#10;quest&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/lib/poller/questions/poll_question.ex&#10;home_con&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/lib/poller_web/controllers/home_controller.ex&#10;app.css&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/assets/css/app.css&#10;page&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/lib/poller_web/controllers/page_controller.ex&#10;mix&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/mix.exs&#10;user_vo&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/priv/repo/migrations/20180305100120_create_user_votes.exs&#10;see&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/priv/repo/seeds.exs&#10;answer&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/priv/repo/migrations/20180305091436_create_answers.exs&#10;home/index&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/lib/poller_web/templates/home/index.html.eex&#10;app.js&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/assets/js/app.js&#10;app&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/lib/poller_web/templates/layout/app.html.eex&#10;poller&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/lib/poller.ex&#10;chec&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/lib/poller_web/plugs/check_auth.ex&#10;check&#9;ACTION&#9;CheckinProject&#10;auth&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/lib/poller_web/controllers/auth_controller.ex&#10;route&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/lib/poller_web/router.ex&#10;rea&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/README.md&#10;p&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/lib/poller.ex&#10;app.html&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/lib/poller_web/templates/layout/app.html.eex&#10;index.html.eex&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/lib/poller_web/templates/page/index.html.eex&#10;router&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/lib/poller_web/router.ex&#10;user.&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/lib/poller/auth/user.ex" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RunDashboard">
@@ -297,20 +295,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file:///usr/local/bin/elixir">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/poller_web/controllers/home_controller.ex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="8" lean-forward="false" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/poller_web/templates/auth/login.html.eex">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
@@ -490,20 +474,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/poller_web/templates/home/index.html.eex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="5" lean-forward="false" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/app.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="693">
-          <caret line="423" column="16" lean-forward="false" selection-start-line="423" selection-start-column="16" selection-end-line="423" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/poller_web/controllers/auth_controller.ex">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="705">
@@ -638,34 +608,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/poller/questions/poll_question.ex">
+    <entry file="file://$PROJECT_DIR$/assets/css/landing_page.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/poller_web/controllers/page_controller.ex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="6" lean-forward="false" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/poller_web/controllers/page_controller_test.exs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="23" lean-forward="false" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/poller_web/templates/layout/app.html.eex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="62" lean-forward="false" selection-start-line="16" selection-start-column="62" selection-end-line="16" selection-end-column="62" />
           <folding />
         </state>
       </provider>
@@ -678,11 +624,77 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/app.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="18" lean-forward="false" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/poller_web/controllers/page_controller_test.exs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="23" lean-forward="false" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/poller_web/controllers/page_controller.ex">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="6" lean-forward="false" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lib/poller_web/templates/layout/landing.html.eex">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="24" lean-forward="false" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
+        <state relative-caret-position="180">
+          <caret line="12" column="106" lean-forward="false" selection-start-line="12" selection-start-column="106" selection-end-line="12" selection-end-column="106" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/poller/questions/poll_question.ex">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/poller_web/controllers/home_controller.ex">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="44" lean-forward="false" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/poller_web/templates/home/index.html.eex">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="12" lean-forward="false" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
+          <folding>
+            <element signature="e#1039#1046#1#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/poller_web/templates/layout/app.html.eex">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="48" column="16" lean-forward="false" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="16" />
+          <folding>
+            <element signature="e#1877#1883#0#HTML" expanded="true" />
+            <element signature="e#1900#1906#0#HTML" expanded="true" />
+            <element signature="e#1923#1929#0#HTML" expanded="true" />
+            <element signature="e#1946#1952#0#HTML" expanded="true" />
+            <element signature="e#1969#1975#0#HTML" expanded="true" />
+            <element signature="e#1992#1998#0#HTML" expanded="true" />
+            <element signature="e#2015#2021#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
