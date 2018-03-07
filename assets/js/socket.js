@@ -66,4 +66,15 @@ home_channel.push("shout", {})
 home_channel.on("shout", payload =>{
     console.log("Got back response from server.")
 })
+
+home_channel.on("new_poll", payload =>{
+    console.log("New Poll Created")
+    console.log(payload)
+})
+
+home_channel.on("vote", payload => {
+    console.log("Some one voted on a poll")
+    console.log(payload)
+})
+
 export default socket

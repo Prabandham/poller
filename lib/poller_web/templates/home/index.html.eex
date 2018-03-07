@@ -5,16 +5,6 @@
             <h5>All Polls Today</h5>
          </div>
 
-         <div class='col'>
-            &nbsp;
-            &nbsp;
-            &nbsp;
-            &nbsp;
-            &nbsp;
-            &nbsp;
-            &nbsp;
-         </div>
-
         <div class='col float-right' style="text-align:right;">
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
                 New Poll
@@ -27,7 +17,7 @@
     <div class="row">
         <div class="card-columns">
             <%= for poll <- @polls do %>
-                <div class="card">
+                <div class="card" id="poll_question_id_<%= poll.id %>">
                   <div class="card-header">
                     <blockquote class="blockquote mb-0">
                         <h5> <%= poll.content %></h5>
@@ -42,13 +32,25 @@
                   <div class="card-body">
                     <div class="row">
                         <%= for answer <- poll.answers do %>
-                            <div class="col-sm-6">
-                                <p class="card-text"><%= answer.content %></p>
-                                <span>
-                                    <div class="progress" style="height: 20px;">
-                                      <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </span>
+                            <div class="col-sm-4">
+                                <%= if user_has_voted?(@conn, answer) do %>
+                                    <!-- Make content of answer green and disable the option to click on the vote again -->
+                                    <p class="card-text text-success"><%= answer.content %></p>
+                                    <span>
+                                        <div class="progress" style="height: 20px;">
+                                          <div class="progress-bar text-center" role="progressbar" style="width: <%= percentage_for(answer, poll.answers) %>;" aria-valuenow="<%= answer.votes %>" aria-valuemin="0" aria-valuemax="<%= total_value_for_progress_bar(poll.answers) %>" id="answer_id_<%= answer.id %>"><%= answer.votes %></div>
+                                        </div>
+                                    </span>
+                                <% else %>
+                                    <p class="card-text"><%= answer.content %></p>
+                                    <span class='vote-bar'>
+                                        <div class="progress" style="height: 20px;">
+                                          <div class="progress-bar text-center" role="progressbar" style="width: <%= percentage_for(answer, poll.answers) %>;" aria-valuenow="<%= answer.votes %>" aria-valuemin="0" aria-valuemax="<%= total_value_for_progress_bar(poll.answers) %>" id="answer_id_<%= answer.id %>">
+                                            <span class='progress-value'><%= answer.votes %></span>
+                                          </div>
+                                        </div>
+                                    </span>
+                                <% end %>
                             </div>
                         <% end %>
                     </div>
@@ -58,6 +60,7 @@
         </div>
     </div>
 </div>
+
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">

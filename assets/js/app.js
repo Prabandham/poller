@@ -18,7 +18,7 @@ import "phoenix_html";
 // Local files can be imported directly using relative
 // paths "./socket" or full ones "web/static/js/socket".
 
- import socket from "./socket"
+import socket from "./socket"
 
 $(document).ready(function() {
     // First initialize bootstrap Material Design
@@ -34,13 +34,13 @@ $(document).ready(function() {
         $(".home-page").height(height);
     });
 
-    //Toggle between Login and Register divs
-    $('#show-reg-form').on('click', function() {
-        $('#login-form').toggleClass('hidden');
-        $('#registration-form').toggleClass('hidden');
-    });
-    $('#show-login-form').on('click', function() {
-        $('#registration-form').toggleClass('hidden');
-        $('#login-form').toggleClass('hidden');
+    // Set user's id to a variable in JS as this will be needed to make posts.
+    window.user_id = $("#user_id").text();
+
+    // Voting for a poll by a user.
+    $(".vote-bar").on('click', function() {
+        let progress_id = $(this).find(".progress-bar").attr('id')
+        let answer_id = progress_id.split("_").pop()
+        home_channel.push("vote", {answer_id: answer_id, user_id: window.user_id})
     });
 });

@@ -16,7 +16,7 @@ defmodule Poller.Answers.UserVotes do
   @doc false
   def changeset(%UserVotes{} = user_votes, attrs) do
     user_votes
-    |> cast(attrs, [])
-    |> validate_required([])
+    |> cast(attrs, [:answer_id, :user_id])
+    |> validate_required([:answer_id, :user_id])
   end
 end
