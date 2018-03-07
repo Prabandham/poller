@@ -32,7 +32,7 @@
                     <%= current_user(@conn).username %>
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="hidden" id="user_id" href="#"><%= current_user(@conn).id %></a>
+                  <a class="hidden" id="user_id" href="#" style="display: none;"><%= current_user(@conn).id %></a>
                   <a class="dropdown-item" href="#">Profile</a>
                   <div class="dropdown-divider"></div>
                   <%= link("Logout", to: "/logout", class: "dropdown-item") %>
