@@ -38,7 +38,7 @@ $(document).ready(function() {
     window.user_id = $("#user_id").text();
 
     // Voting for a poll by a user.
-    $(".vote-bar").on('click', function() {
+    $("body").on('click', '.vote-bar', function() {
         let progress_id = $(this).find(".progress-bar").attr('id')
         let answer_id = progress_id.split("_").pop()
         home_channel.push("vote", {answer_id: answer_id, user_id: window.user_id})

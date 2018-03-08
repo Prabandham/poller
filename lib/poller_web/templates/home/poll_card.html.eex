@@ -1,0 +1,41 @@
+<div class="card">
+  <div class="card-header">
+    <blockquote class="blockquote mb-0">
+        <h5> <%= @poll.content %></h5>
+        <footer class="blockquote-footer">
+            <%= @poll.user.username %>
+        </footer>
+        <%= for tag <- @poll.tags do %>
+            <span class="badge badge-primary text-small"><%= tag %></span>
+        <% end %>
+    </blockquote>
+  </div>
+  <div class="card-body">
+    <div class="row">
+        <%= for answer <- @poll.answers do %>
+            <div class="col-sm-4">
+                <%= if user_has_voted?(@current_user_id, answer) do %>
+                    <!-- Make content of answer green and disable the option to click on the vote again -->
+                    <p class="card-text text-success"><%= answer.content %></p>
+                    <span>
+                        <div class="progress" style="height: 20px;">
+                          <div class="progress-bar text-center" role="progressbar" style="width: <%= percentage_for(answer, @poll.answers) %>;" aria-valuenow="<%= answer.votes %>" aria-valuemin="0" aria-valuemax="<%= total_value_for_progress_bar(@poll.answers) %>" id="answer_id_<%= answer.id %>">
+                            <span class='progress-value'><%= percentage_for(answer, @poll.answers) %></span>
+                          </div>
+                        </div>
+                    </span>
+                <% else %>
+                    <p class="card-text"><%= answer.content %></p>
+                    <span class='vote-bar'>
+                        <div class="progress" style="height: 20px;">
+                          <div class="progress-bar text-center" role="progressbar" style="width: <%= percentage_for(answer, @poll.answers) %>;" aria-valuenow="<%= answer.votes %>" aria-valuemin="0" aria-valuemax="<%= total_value_for_progress_bar(@poll.answers) %>" id="answer_id_<%= answer.id %>">
+                            <span class='progress-value'><%= percentage_for(answer, @poll.answers) %></span>
+                          </div>
+                        </div>
+                    </span>
+                <% end %>
+            </div>
+        <% end %>
+    </div>
+  </div>
+</div>

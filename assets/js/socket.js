@@ -73,8 +73,21 @@ home_channel.on("new_poll", payload =>{
 })
 
 home_channel.on("vote", payload => {
-    console.log("Some one voted on a poll")
     console.log(payload)
+    let question_id = "#poll_question_id_" + payload.question_id
+    let question_div = $(question_id)
+    question_div.empty()
+    question_div.append($(payload.html))
+    // TODO this is not working fix this.
+    let question_div = $(question_id)
+    question_div.css("background-color", "#cff7cf59")
+    sleep(750).then(() => {
+        question_div.css("background-color", "white")
+    })
 })
 
+// sleep time expects milliseconds
+function sleep (time) {
+  return new Promise((resolve) => setTimeout(resolve, time));
+}
 export default socket
