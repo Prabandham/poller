@@ -43,4 +43,32 @@ $(document).ready(function() {
         let answer_id = progress_id.split("_").pop()
         home_channel.push("vote", {answer_id: answer_id, user_id: window.user_id})
     });
+
+    // New Poll Form, add filds dynamically.
+    let next = 1;
+    $(".add-more").click(function(e){
+        e.preventDefault();
+        var addto = "#field" + next;
+        var addRemove = "#field" + (next);
+        if(next == 6) {
+            $("#answer_limit_reached").removeClass("d-none")
+            return
+        }
+        next = next + 1;
+        var newIn = '<input autocomplete="off" class="input" id="field' + next + '" name="answers' + next + '" type="text">';
+        var newInput = $(newIn);
+        var removeBtn = '<button id="remove' + (next - 1) + '" class="btn btn-danger remove-me" >-</button></div><div id="field">';
+        var removeButton = $(removeBtn);
+        $(addto).after(newInput);
+        $(addRemove).after(removeButton);
+        $("#field" + next).attr('data-source',$(addto).attr('data-source'));
+        $("#count").val(next);  
+            $('.remove-me').click(function(e){
+                e.preventDefault();
+                var fieldNum = this.id.charAt(this.id.length-1);
+                var fieldID = "#field" + fieldNum;
+                $(this).remove();
+                $(fieldID).remove();
+            });
+    });
 });

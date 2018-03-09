@@ -12,7 +12,7 @@
   </div>
   <div class="card-body">
     <div class="row">
-        <%= for answer <- @poll.answers do %>
+        <%= for answer <- sort_answers(@poll.answers) do %>
             <div class="col-sm-4">
                 <%= if user_has_voted?(@current_user_id, answer) do %>
                     <!-- Make content of answer green and disable the option to click on the vote again -->

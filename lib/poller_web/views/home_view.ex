@@ -16,7 +16,7 @@ defmodule PollerWeb.HomeView do
       0 -> "0 %"
       _ ->
         value = total_value_for_progress_bar(answers) - total_votes
-        values = (1.0*answer.votes/value)*100
+        values = (1.0 * answer.votes / value) * 100
         percent_string = values
                         |> Float.round(2)
                         |> Float.to_string()
@@ -30,5 +30,11 @@ defmodule PollerWeb.HomeView do
                   |> Enum.map(fn(x) -> x.votes end)
                   |> Enum.sum()
     total_votes + 10
+  end
+
+  def sort_answers(answers) do
+    answers
+    |> Enum.sort_by(&(&1.votes))
+    |> Enum.reverse
   end
 end

@@ -6,7 +6,7 @@
          </div>
 
         <div class='col float-right' style="text-align:right;">
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#newPollModal">
                 New Poll
             </button>
          </div>
@@ -26,7 +26,7 @@
 </div>
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="newPollModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -37,7 +37,25 @@
         </button>
       </div>
       <div class="modal-body">
-        ...
+        <div class="container">
+            <div class="row">
+                <input type="hidden" name="count" value="1" />
+                <div class='text-warning d-none' id="answer_limit_reached"><p>Only six answers are allowed per question</p></div>
+                <div class="control-group" id="fields">
+                    <div class="controls" id="profs"> 
+                        <form class="input-append" id="new_poll">
+                            <label>Question</label>
+                            <textarea name='question' class='form-control' cols="80" id="question"></textarea>
+                            <h5 class="text-muted">Answers</h5>
+                            <span><small>(You can add upto 6 answers)
+                            <hr />
+                            <div id="field"><input autocomplete="off" class="input" id="field1" name="answers" type="text" data-items="8"/><button id="b1" class="btn add-more" type="button">+</button></div>
+                        </form>
+                    <br>
+                    </div>
+                </div>
+            </div>
+    </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
