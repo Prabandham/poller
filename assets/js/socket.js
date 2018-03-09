@@ -79,11 +79,12 @@ home_channel.on("vote", payload => {
     question_div.empty()
     question_div.append($(payload.html))
     // TODO this is not working fix this.
-    let question_div = $(question_id)
-    question_div.css("background-color", "#cff7cf59")
-    sleep(750).then(() => {
-        question_div.css("background-color", "white")
-    })
+    let card_div = question_id + "> .card"
+    let new_question_div = $(card_div)
+    new_question_div.addClass("animated pulse")
+    // sleep(750).then(() => {
+    //     new_question_div.css("background-color", "white")
+    // })
 })
 
 // sleep time expects milliseconds
