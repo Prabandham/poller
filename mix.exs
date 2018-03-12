@@ -6,9 +6,9 @@ defmodule Poller.Mixfile do
       app: :poller,
       version: current_version(),
       elixir: "~> 1.6.1",
-      elixirc_paths: elixirc_paths(Mix.env),
-      compilers: [:phoenix, :gettext] ++ Mix.compilers,
-      start_permanent: Mix.env == :prod,
+      elixirc_paths: elixirc_paths(Mix.env()),
+      compilers: [:phoenix, :gettext] ++ Mix.compilers(),
+      start_permanent: Mix.env() == :prod,
       aliases: aliases(),
       deps: deps()
     ]
@@ -26,7 +26,7 @@ defmodule Poller.Mixfile do
 
   # Specifies which paths to compile per environment.
   defp elixirc_paths(:test), do: ["lib", "test/support"]
-  defp elixirc_paths(_),     do: ["lib"]
+  defp elixirc_paths(_), do: ["lib"]
 
   # Specifies your project dependencies.
   #
@@ -45,7 +45,7 @@ defmodule Poller.Mixfile do
       {:argon2_elixir, "~> 1.2"},
       {:con_cache, "~> 0.12.1"},
       {:faker, "~> 0.9"},
-      {:credo, "~> 0.9.0-rc1", only: [:dev, :test], runtime: false},
+      {:credo, "~> 0.9.0-rc1", only: [:dev, :test], runtime: false}
     ]
   end
 
@@ -59,17 +59,20 @@ defmodule Poller.Mixfile do
     [
       "ecto.setup": ["ecto.create", "ecto.migrate", "run priv/repo/seeds.exs"],
       "ecto.reset": ["ecto.drop", "ecto.setup"],
-      "test": ["ecto.create --quiet", "ecto.migrate", "test"]
+      test: ["ecto.create --quiet", "ecto.migrate", "test"]
     ]
   end
 
   defp current_version() do
     # get git version
-    {description, 0} = System.cmd("git", ~w[describe]) # => returns something like: v1.0-231-g1c7ef8b
-    _git_version = String.strip(description)
-                   |> String.split("-")
-                   |> Enum.take(2)
-                   |> Enum.join("+")
-                   |> String.replace_leading("v", "")
+    # => returns something like: v1.0-231-g1c7ef8b
+    {description, 0} = System.cmd("git", ~w[describe])
+
+    _git_version =
+      String.trim(description)
+      |> String.split("-")
+      |> Enum.take(2)
+      |> Enum.join("+")
+      |> String.replace_leading("v", "")
   end
 end

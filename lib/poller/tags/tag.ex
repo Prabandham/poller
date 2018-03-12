@@ -3,12 +3,11 @@ defmodule Poller.Tags.Tag do
   import Ecto.Changeset
   alias Poller.Tags.Tag
 
-
   @primary_key {:id, :binary_id, autogenerate: true}
   @foreign_key_type :binary_id
   schema "tags" do
-    field :color, :string
-    field :name, :string
+    field(:color, :string)
+    field(:name, :string)
 
     timestamps()
   end

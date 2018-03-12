@@ -7,15 +7,20 @@ defmodule PollerWeb.AppHelpers do
 
   def current_user(conn) do
     case Plug.Conn.get_session(conn, :current_user) do
-      nil -> nil
-      id  ->
+      nil ->
+        nil
+
+      id ->
         key = "current_user_" <> id
+
         case ConCache.get(:poller_cache, key) do
           nil ->
             user = Poller.Auth.User |> Poller.Repo.get_by(id: id)
             ConCache.put(:poller_cache, key, user)
             ConCache.get(:poller_cache, key)
-          map -> map
+
+          map ->
+            map
         end
     end
   end

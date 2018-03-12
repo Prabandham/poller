@@ -3,10 +3,10 @@ defmodule PollerWeb.UserSocket do
 
   ## Channels
   # channel "room:*", PollerWeb.RoomChannel
-  channel "poll:*", PollerWeb.PollChannel
+  channel("poll:*", PollerWeb.PollChannel)
 
   ## Transports
-  transport :websocket, Phoenix.Transports.WebSocket
+  transport(:websocket, Phoenix.Transports.WebSocket)
   # transport :longpoll, Phoenix.Transports.LongPoll
 
   # Socket params are passed from the client and can

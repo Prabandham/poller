@@ -3,14 +3,13 @@ defmodule Poller.Questions.PollQuestion do
   import Ecto.Changeset
   alias Poller.Questions.PollQuestion
 
-
   @primary_key {:id, :binary_id, autogenerate: true}
   @foreign_key_type :binary_id
   schema "question" do
-    field :content, :string
-    field :tags, {:array, :string}
-    belongs_to :user, Poller.Auth.User
-    has_many :answers, Poller.Answers.Answer
+    field(:content, :string)
+    field(:tags, {:array, :string})
+    belongs_to(:user, Poller.Auth.User)
+    has_many(:answers, Poller.Answers.Answer)
 
     timestamps()
   end
