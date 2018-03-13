@@ -55,7 +55,7 @@ $(document).ready(function() {
             return
         }
         next = next + 1;
-        var newIn = '<input autocomplete="off" class="input" id="field' + next + '" name="answers' + next + '" type="text">';
+        var newIn = '<input autocomplete="off" class="input" id="field' + next + '" name="answers[]" type="text">';
         var newInput = $(newIn);
         var removeBtn = '<button id="remove' + (next - 1) + '" class="btn btn-danger remove-me" >-</button></div><div id="field">';
         var removeButton = $(removeBtn);
@@ -70,5 +70,17 @@ $(document).ready(function() {
                 $(this).remove();
                 $(fieldID).remove();
             });
+    });
+
+    // Save poll form
+    $("#save-poll").on('click', function() {
+        $("#newPollModal").addClass('animated fadeOutDown');
+        $("#newPollModal").modal('hide');
+        // TODO also append a new card to the starting of the div of cards and may be animate this as well.
+        // TODO also get tags from the Web UI
+        var values = $("#new_poll").serializeArray()
+        $.get('/new_poll', values).then(function(data) {
+            console.log(data)
+        })
     });
 });

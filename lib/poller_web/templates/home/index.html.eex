@@ -44,12 +44,13 @@
                 <div class="control-group" id="fields">
                     <div class="controls" id="profs"> 
                         <form class="input-append" id="new_poll">
+                            <input type='hidden' name='user_id', value="<%= current_user(@conn).id %>" />
                             <label>Question</label>
                             <textarea name='question' class='form-control' cols="80" id="question"></textarea>
                             <h5 class="text-muted">Answers</h5>
                             <span><small>(You can add upto 6 answers)
                             <hr />
-                            <div id="field"><input autocomplete="off" class="input" id="field1" name="answers" type="text" data-items="8"/><button id="b1" class="btn add-more" type="button">+</button></div>
+                            <div id="field"><input autocomplete="off" class="input" id="field1" name="answers[]" type="text" data-items="8"/><button id="b1" class="btn add-more" type="button">+</button></div>
                         </form>
                     <br>
                     </div>
@@ -59,7 +60,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-primary" id="save-poll">Save changes</button>
       </div>
     </div>
   </div>

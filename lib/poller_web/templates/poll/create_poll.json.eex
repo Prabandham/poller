@@ -1,0 +1,4 @@
+{
+  "status": "<%= @data[:status] %>",
+  "data": "<%= @data[:data] %>"
+}

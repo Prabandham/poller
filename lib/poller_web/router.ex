@@ -33,6 +33,7 @@ defmodule PollerWeb.Router do
     # Main Application
     get("/home", HomeController, :index)
     get("/logout", AuthController, :logout)
+    get("/new_poll", PollController, :create_poll)
   end
 
   # Other scopes may use custom stacks.

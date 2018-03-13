@@ -21,4 +21,8 @@ defmodule Poller.Questions.PollQuestion do
     |> validate_required([:content, :user_id, :tags])
     |> unique_constraint(:content)
   end
+
+  def create_poll_with_answers(question, answeers) do
+
+  end
 end
