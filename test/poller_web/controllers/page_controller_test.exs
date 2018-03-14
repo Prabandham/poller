@@ -1,6 +1,14 @@
 defmodule PollerWeb.PageControllerTest do
   use PollerWeb.ConnCase
 
+  def fabricate_user(_context) do
+    user_prams = %{email: "foo@gmail.com", username: "foo", password: "password"}
+    changeset = Poller.Auth.User.new_changeset(%Poller.Auth.User{}, user_prams)
+    Poller.Repo.insert!(changeset)
+    # NOTE all setup functions should return an :ok else it will fail for somereason.
+    :ok
+  end
+
   test "GET /", %{conn: conn} do
     conn = get(conn, "/")
 
@@ -23,5 +31,22 @@ defmodule PollerWeb.PageControllerTest do
 
     assert html_response(conn, 200) =~
              "<p class=\"alert alert-danger\" role=\"alert\">Invalid login credentials</p>"
+  end
+
+  setup :fabricate_user
+
+  test "POST login with valid credentials should responsd with success.", %{conn: conn} do
+    conn = post(conn, auth_path(conn, :new), %{login: %{login: "foo", password: "password"}})
+
+    assert html_response(conn, 302) =~
+             "<html><body>You are being <a href=\"/home\">redirected</a>.</body></html>"
+  end
+
+  test "POST login with email should allow user to login", %{conn: conn} do
+    conn =
+      post(conn, auth_path(conn, :new), %{login: %{login: "foo@gmail.com", password: "password"}})
+
+    assert html_response(conn, 302) =~
+             "<html><body>You are being <a href=\"/home\">redirected</a>.</body></html>"
   end
 end

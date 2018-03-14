@@ -10,7 +10,14 @@ defmodule Poller.Mixfile do
       compilers: [:phoenix, :gettext] ++ Mix.compilers(),
       start_permanent: Mix.env() == :prod,
       aliases: aliases(),
-      deps: deps()
+      deps: deps(),
+      test_coverage: [tool: ExCoveralls],
+      preferred_cli_env: [
+        coveralls: :test,
+        "coveralls.detail": :test,
+        "coveralls.post": :test,
+        "coveralls.html": :test
+      ]
     ]
   end
 
@@ -44,8 +51,9 @@ defmodule Poller.Mixfile do
       {:comeonin, "~> 4.0"},
       {:argon2_elixir, "~> 1.2"},
       {:con_cache, "~> 0.12.1"},
-      {:faker, "~> 0.9"},
-      {:credo, "~> 0.9.0-rc1", only: [:dev, :test], runtime: false}
+      {:faker, "~> 0.9", only: [:dev, :test], runtime: false},
+      {:credo, "~> 0.9.0-rc1", only: [:dev, :test], runtime: false},
+      {:excoveralls, "~> 0.8", only: :test}
     ]
   end
 
