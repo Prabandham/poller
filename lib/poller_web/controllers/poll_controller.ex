@@ -3,7 +3,7 @@ defmodule PollerWeb.PollController do
 
   use PollerWeb, :controller
 
-  def create_poll(conn, params) do
+  def create_poll(conn, _params) do
     data = %{status: "error", data: "Could not create Poll !"}
 
     conn

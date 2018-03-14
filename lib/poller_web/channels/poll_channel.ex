@@ -18,7 +18,7 @@ defmodule PollerWeb.PollChannel do
   end
 
   # New polls will be handled here.
-  def handle_in("new_poll", payload, socket) do
+  def handle_in("new_poll", _payload, socket) do
     {:noreply, socket}
   end
 

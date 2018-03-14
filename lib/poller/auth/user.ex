@@ -81,6 +81,6 @@ defmodule Poller.Auth.User do
     end
   end
 
-  defp send_verification_mailer(changeset) do
-  end
+#  defp send_verification_mailer(changeset) do
+#  end
 end

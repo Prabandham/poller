@@ -1,5 +1,5 @@
 defmodule Poller.Services do
-  alias Poller.{Auth.User, Repo, Questions.PollQuestion}
+  alias Poller.{Auth.User, Repo}
 
   @moduledoc """
   Poller Services are set of services that will perform things like API calls

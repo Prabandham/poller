@@ -24,6 +24,6 @@ defmodule Poller.Questions.PollQuestion do
     |> unique_constraint(:content)
   end
 
-  def create_poll_with_answers(question, answeers) do
+  def create_poll_with_answers(_question, _answers) do
   end
 end
