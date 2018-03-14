@@ -1,4 +1,6 @@
 defmodule Poller.Auth.User do
+  @moduledoc false
+
   use Ecto.Schema
   import Ecto.Changeset
   alias Poller.Auth.User

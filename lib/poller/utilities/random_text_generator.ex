@@ -36,7 +36,9 @@ defmodule Poller.Utilities.RandomTextGenerator do
 
   @doc false
   defp do_randomizer(length, lists) do
-    get_range(length)
+    range = get_range(length)
+
+    range
     |> Enum.reduce([], fn _, acc -> [Enum.random(lists) | acc] end)
     |> Enum.join("")
   end

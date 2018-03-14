@@ -5,7 +5,7 @@
         </div>
 
         <div class="card-body">
-            <div id='registration-form' class=''>
+            <div id='registration-form'>
                  <%= form_for @changeset, auth_path(@conn, :new_registration), fn f -> %>
                     <div class='form-group'>
                         <%= text_input f, :username, class: 'form-control', placeholder: 'Username' %>

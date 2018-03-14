@@ -1,4 +1,6 @@
 defmodule Poller.Questions.PollQuestion do
+  @moduledoc false
+
   use Ecto.Schema
   import Ecto.Changeset
   alias Poller.Questions.PollQuestion
@@ -23,6 +25,5 @@ defmodule Poller.Questions.PollQuestion do
   end
 
   def create_poll_with_answers(question, answeers) do
-
   end
 end

@@ -1,4 +1,6 @@
 defmodule PollerWeb.PollChannel do
+  @moduledoc false
+
   use PollerWeb, :channel
 
   def join("poll:home", payload, socket) do

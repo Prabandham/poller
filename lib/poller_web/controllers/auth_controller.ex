@@ -44,8 +44,6 @@ defmodule PollerWeb.AuthController do
         |> redirect(to: "/login")
 
       {:error, changeset} ->
-        IO.inspect(changeset.errors)
-
         conn
         |> put_flash(:error, "Registration Not Successful ! Please try again.")
         |> render("register.html", changeset: changeset)

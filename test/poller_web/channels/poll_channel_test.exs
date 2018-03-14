@@ -6,7 +6,7 @@ defmodule PollerWeb.PollChannelTest do
   setup do
     {:ok, _, socket} =
       socket("user_id", %{some: :assign})
-      |> subscribe_and_join(PollChannel, "poll:lobby")
+      |> subscribe_and_join(PollChannel, "poll:home")
 
     {:ok, socket: socket}
   end
@@ -16,7 +16,7 @@ defmodule PollerWeb.PollChannelTest do
     assert_reply(ref, :ok, %{"hello" => "there"})
   end
 
-  test "shout broadcasts to poll:lobby", %{socket: socket} do
+  test "shout broadcasts to poll:home", %{socket: socket} do
     push(socket, "shout", %{"hello" => "all"})
     assert_broadcast("shout", %{"hello" => "all"})
   end

@@ -1,4 +1,6 @@
 defmodule Poller.Answers.Answer do
+  @moduledoc false
+
   use Ecto.Schema
   import Ecto.Changeset
   import Ecto.Query

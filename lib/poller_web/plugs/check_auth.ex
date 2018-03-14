@@ -1,4 +1,6 @@
 defmodule PollerWeb.Plugs.CheckAuth do
+  @moduledoc false
+
   @behaviour Plug
   import Plug.Conn
   import Phoenix.Controller, only: [put_flash: 3, redirect: 2]
@@ -23,11 +25,11 @@ defmodule PollerWeb.Plugs.CheckAuth do
       # User is not logged in so redirect him to login
       # This could have been easily handled in the routes by creating a new pipeline.
       # But I am doing it here as this is more explicit. And this also allows us to write all routes in one pipeline block
-      cond do
-        conn.request_path in ["/", "/login", "/register", "/auth/new", "/new/registration"] ->
+      case conn.request_path do
+        x when x in ["/", "/login", "/register", "/auth/new", "/new/registration"] ->
           conn
 
-        true ->
+        _ ->
           conn |> put_flash(:error, "Please Login First.") |> redirect(to: "/login") |> halt()
       end
     end

@@ -1,4 +1,6 @@
 defmodule Poller.Answers.UserVotes do
+  @moduledoc false
+
   use Ecto.Schema
   import Ecto.Changeset
   alias Poller.Answers.UserVotes
