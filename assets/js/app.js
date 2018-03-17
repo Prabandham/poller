@@ -74,13 +74,18 @@ $(document).ready(function() {
 
     // Save poll form
     $("#save-poll").on('click', function() {
-        $("#newPollModal").addClass('animated fadeOutDown');
-        $("#newPollModal").modal('hide');
         // TODO also append a new card to the starting of the div of cards and may be animate this as well.
         // TODO also get tags from the Web UI
         var values = $("#new_poll").serializeArray()
         $.get('/new_poll', values).then(function(data) {
-            console.log(data)
+            console.log(data);
+            if(data.status == "success") {
+                $("#newPollModal").addClass('animated fadeOutDown');
+                $("[data-dismiss=modal]").trigger({ type: "click" });
+                $("#newPollModal").removeClass('animated fadeOutDown');
+            } else {
+                alert("Some thing went wront in saving the poll. Please try again.")
+            }
         })
     });
 });
