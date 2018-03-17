@@ -78,14 +78,9 @@ $(document).ready(function() {
         // TODO also get tags from the Web UI
         var values = $("#new_poll").serializeArray()
         $.get('/new_poll', values).then(function(data) {
-            console.log(data);
-            if(data.status == "success") {
-                $("#newPollModal").addClass('animated fadeOutDown');
-                $("[data-dismiss=modal]").trigger({ type: "click" });
-                $("#newPollModal").removeClass('animated fadeOutDown');
-            } else {
-                alert("Some thing went wront in saving the poll. Please try again.")
-            }
+            $("#newPollModal").addClass('animated fadeOutDown');
+            $("[data-dismiss=modal]").trigger({ type: "click" });
+            $("#newPollModal").removeClass('animated fadeOutDown');
         })
     });
 });

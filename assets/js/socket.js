@@ -68,8 +68,9 @@ home_channel.on("shout", payload =>{
 })
 
 home_channel.on("new_poll", payload =>{
-    console.log("New Poll Created")
-    console.log(payload)
+    let question_id = "poll_question_id_" + payload.question_id;
+    let question_div = "<div id=" + question_id +">" + payload.html + "</div>";
+    $(".card-columns").prepend($(question_div));
 })
 
 home_channel.on("vote", payload => {
@@ -82,9 +83,6 @@ home_channel.on("vote", payload => {
     let card_div = question_id + "> .card"
     let new_question_div = $(card_div)
     new_question_div.addClass("animated pulse")
-    // sleep(750).then(() => {
-    //     new_question_div.css("background-color", "white")
-    // })
 })
 
 // sleep time expects milliseconds

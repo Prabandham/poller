@@ -14,10 +14,22 @@ defmodule PollerWeb.PollController do
           [question_response | _] = questions
           {:ok, question} = question_response
 
-          question
-          |> Poller.Repo.preload(:user, answers: [:user_votes])
+          poll =
+            question
+            |> Poller.Repo.preload([:user, answers: [:user_votes]])
 
-          # TODO broadcast to all users the new poll and send an Ok to the fontend so that the modal can close.
+          html =
+            PollerWeb.HomeView
+            |> Phoenix.View.render_to_string(
+              "poll_card.html",
+              poll: poll,
+              current_user_id: user_id
+            )
+
+          PollerWeb.Endpoint.broadcast("poll:home", "new_poll", %{
+            html: html,
+            question_id: poll.id
+          })
 
           %{status: "success"}
 
