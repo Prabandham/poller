@@ -51,9 +51,10 @@ defmodule Poller.Mixfile do
       {:comeonin, "~> 4.0"},
       {:argon2_elixir, "~> 1.2"},
       {:con_cache, "~> 0.12.1"},
-      {:faker, "~> 0.9", only: [:dev, :test], runtime: false},
+      {:faker, "~> 0.9"},
       {:credo, "~> 0.9.0-rc1", only: [:dev, :test], runtime: false},
-      {:excoveralls, "~> 0.8", only: :test}
+      {:excoveralls, "~> 0.8", only: :test},
+      {:distillery, "~> 1.0.0"}
     ]
   end
 

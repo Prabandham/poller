@@ -58,7 +58,16 @@ config :logger, level: :info
 #
 #     config :poller, PollerWeb.Endpoint, server: true
 #
+config :poller, PollerWeb.Endpoint,
+       load_from_system_env: true,
+       server: true,
+       secret_key_base: "${SECRET_KEY_BASE}",
+       cache_static_manifest: "priv/static/cache_manifest.json"
 
-# Finally import the config/prod.secret.exs
-# which should be versioned separately.
-import_config "prod.secret.exs"
+# Configure your database
+config :poller, Poller.Repo,
+       adapter: Ecto.Adapters.Postgres,
+       url: "${DATABASE_URL}",
+       database: "",
+       ssl: true,
+       pool_size: 1
