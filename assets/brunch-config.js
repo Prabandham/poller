@@ -16,8 +16,6 @@ exports.config = {
         before: [
           "vendor/js/jquery-3.3.1.min.js",
           "vendor/js/popper.min.js",
-          "vendor/js/ripples.min.js",
-          "vendor/js/bootstrap-material-design.js",
         ]
       }
     },
