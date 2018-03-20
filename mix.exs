@@ -4,7 +4,7 @@ defmodule Poller.Mixfile do
   def project do
     [
       app: :poller,
-      version: current_version(),
+      version: "1.0.0",
       elixir: "~> 1.6.1",
       elixirc_paths: elixirc_paths(Mix.env()),
       compilers: [:phoenix, :gettext] ++ Mix.compilers(),
@@ -72,16 +72,16 @@ defmodule Poller.Mixfile do
     ]
   end
 
-  defp current_version() do
-    # get git version
-    # => returns something like: v1.0-231-g1c7ef8b
-    {description, 0} = System.cmd("git", ~w[describe])
-
-    _git_version =
-      String.trim(description)
-      |> String.split("-")
-      |> Enum.take(2)
-      |> Enum.join("+")
-      |> String.replace_leading("v", "")
-  end
+#  defp current_version() do
+#    # get git version
+#    # => returns something like: v1.0-231-g1c7ef8b
+#    {description, 0} = System.cmd("git", ~w[describe])
+#
+#    _git_version =
+#      String.trim(description)
+#      |> String.split("-")
+#      |> Enum.take(2)
+#      |> Enum.join("+")
+#      |> String.replace_leading("v", "")
+#  end
 end
