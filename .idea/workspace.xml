@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a17d5b1f-20ae-45ee-8f95-2202601d5b3b" name="Default" comment="c">
+      <change beforePath="$PROJECT_DIR$/assets/brunch-config.js" afterPath="$PROJECT_DIR$/assets/brunch-config.js" />
       <change beforePath="$PROJECT_DIR$/lib/poller_web/templates/layout/app.html.eex" afterPath="$PROJECT_DIR$/lib/poller_web/templates/layout/app.html.eex" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -27,11 +28,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.html.eex" pinned="false" current-in-tab="true">
+      <file leaf-file-name="app.html.eex" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/poller_web/templates/layout/app.html.eex">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="124" lean-forward="false" selection-start-line="12" selection-start-column="124" selection-end-line="12" selection-end-column="124" />
+            <state relative-caret-position="570">
+              <caret line="74" column="0" lean-forward="false" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="brunch-config.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/assets/brunch-config.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="18" column="27" lean-forward="false" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -101,6 +112,7 @@
         <option value="$PROJECT_DIR$/mix.exs" />
         <option value="$PROJECT_DIR$/config/prod.exs" />
         <option value="$PROJECT_DIR$/lib/poller_web/templates/layout/app.html.eex" />
+        <option value="$PROJECT_DIR$/assets/brunch-config.js" />
       </list>
     </option>
   </component>
@@ -141,28 +153,25 @@
             <path>
               <item name="poller" type="b2602c69:ProjectViewProjectNode" />
               <item name="poller" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="poller" type="b2602c69:ProjectViewProjectNode" />
+              <item name="poller" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="poller" type="b2602c69:ProjectViewProjectNode" />
+              <item name="poller" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="poller" type="b2602c69:ProjectViewProjectNode" />
               <item name="poller" type="462c0819:PsiDirectoryNode" />
               <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="poller_web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="poller" type="b2602c69:ProjectViewProjectNode" />
-              <item name="poller" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="poller_web" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="poller" type="b2602c69:ProjectViewProjectNode" />
-              <item name="poller" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="poller_web" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="layout" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -179,6 +188,13 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="SearchEverywhereHistoryKey" value="seed&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/priv/repo/seeds.exs&#10;poll_q&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/lib/poller/questions/poll_question.ex&#10;poll_con&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/lib/poller_web/controllers/poll_controller.ex&#10;poll_ch&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/lib/poller_web/channels/poll_channel.ex&#10;user.ex&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/lib/poller/auth/user.ex&#10;send_&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/lib/poller/services/send_mailer.ex&#10;poll_quest&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/lib/poller/questions/poll_question.ex&#10;mix&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/mix.exs&#10;see&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/priv/repo/seeds.exs&#10;router&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/lib/poller_web/router.ex&#10;regist&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/lib/poller_web/templates/auth/register.html.eex&#10;login&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/lib/poller_web/templates/auth/login.html.eex&#10;poll_c&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/lib/poller_web/channels/poll_channel.ex&#10;route&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/lib/poller_web/router.ex&#10;login.&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/lib/poller_web/templates/auth/login.html.eex&#10;auth_view&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/lib/poller_web/views/auth_view.ex&#10;user_vo&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/lib/poller/answers/user_votes.ex&#10;appli&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/lib/poller/application.ex&#10;tag&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/lib/poller/tags/tag.ex&#10;user.&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/lib/poller/auth/user.ex&#10;answer&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/lib/poller/answers/answer.ex&#10;auth_con&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/lib/poller_web/controllers/auth_controller.ex&#10;chec&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/lib/poller_web/plugs/check_auth.ex&#10;poller.ex&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/lib/poller.ex&#10;rand&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/lib/poller/utilities/random_text_generator.ex&#10;poll_&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/lib/poller/questions/poll_question.ex&#10;check_&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/lib/poller_web/plugs/check_auth.ex&#10;question&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/lib/poller/questions/poll_question.ex&#10;home_&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/lib/poller_web/controllers/home_controller.ex&#10;regi&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/lib/poller_web/templates/auth/register.html.eex&#10;app&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/assets/js/app.js&#10;app.js&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/assets/js/app.js&#10;app.html&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/lib/poller_web/templates/layout/app.html.eex&#10;index&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/lib/poller_web/templates/home/index.html.eex&#10;home_vi&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/lib/poller_web/views/home_view.ex&#10;app_&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/lib/poller_web/views/app_helpers.ex&#10;answer.&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/lib/poller/answers/answer.ex&#10;socke&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/assets/js/socket.js&#10;home_con&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/lib/poller_web/controllers/home_controller.ex&#10;home&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/lib/poller_web/views/home_view.ex&#10;user_&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/lib/poller/answers/user_votes.ex&#10;home_view&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/lib/poller_web/views/home_view.ex&#10;sock&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/assets/js/socket.js&#10;app.css&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/assets/css/app.css&#10;app.h&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/lib/poller_web/templates/layout/app.html.eex&#10;home/in&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/lib/poller_web/templates/home/index.html.eex&#10;rea&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/README.md&#10;end&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/lib/poller_web/endpoint.ex&#10;ans&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/lib/poller/answers/answer.ex&#10;app.&#9;FILE&#9;file:///Users/icicle/Spikes/elixir/poller/lib/poller_web/templates/layout/app.html.eex" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets/vendor/js" />
+      <recent name="$PROJECT_DIR$/assets/vendor" />
+      <recent name="$PROJECT_DIR$/assets" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -284,13 +300,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/assets/vendor/css/bootstrap-material-design.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-291">
-          <caret line="7" column="783" lean-forward="false" selection-start-line="7" selection-start-column="783" selection-end-line="7" selection-end-column="783" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/poller_web/views/error_view.ex">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -647,8 +656,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/poller_web/templates/layout/app.html.eex">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="124" lean-forward="false" selection-start-line="12" selection-start-column="124" selection-end-line="12" selection-end-column="124" />
+        <state relative-caret-position="570">
+          <caret line="74" column="0" lean-forward="false" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/brunch-config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="27" lean-forward="false" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
           <folding />
         </state>
       </provider>
