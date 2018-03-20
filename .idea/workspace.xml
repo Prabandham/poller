@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a17d5b1f-20ae-45ee-8f95-2202601d5b3b" name="Default" comment="c">
       <change beforePath="$PROJECT_DIR$/assets/brunch-config.js" afterPath="$PROJECT_DIR$/assets/brunch-config.js" />
-      <change beforePath="$PROJECT_DIR$/lib/poller_web/templates/layout/app.html.eex" afterPath="$PROJECT_DIR$/lib/poller_web/templates/layout/app.html.eex" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,7 +31,7 @@
         <entry file="file://$PROJECT_DIR$/lib/poller_web/templates/layout/app.html.eex">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="570">
-              <caret line="75" column="124" lean-forward="false" selection-start-line="75" selection-start-column="124" selection-end-line="75" selection-end-column="124" />
+              <caret line="75" column="99" lean-forward="true" selection-start-line="75" selection-start-column="99" selection-end-line="75" selection-end-column="99" />
               <folding />
             </state>
           </provider>
@@ -42,7 +41,7 @@
         <entry file="file://$PROJECT_DIR$/assets/brunch-config.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="285">
-              <caret line="19" column="10" lean-forward="false" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
+              <caret line="19" column="47" lean-forward="false" selection-start-line="19" selection-start-column="47" selection-end-line="19" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -53,16 +52,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
               <caret line="7" column="22" lean-forward="false" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bootstrap-material-design.min.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/vendor/js/bootstrap-material-design.min.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="66" lean-forward="false" selection-start-line="0" selection-start-column="66" selection-end-line="0" selection-end-column="66" />
               <folding />
             </state>
           </provider>
@@ -121,8 +110,8 @@
         <option value="$PROJECT_DIR$/lib/poller/questions/poll_question.ex" />
         <option value="$PROJECT_DIR$/config/prod.exs" />
         <option value="$PROJECT_DIR$/mix.exs" />
-        <option value="$PROJECT_DIR$/assets/brunch-config.js" />
         <option value="$PROJECT_DIR$/lib/poller_web/templates/layout/app.html.eex" />
+        <option value="$PROJECT_DIR$/assets/brunch-config.js" />
       </list>
     </option>
   </component>
@@ -177,11 +166,6 @@
               <item name="assets" type="462c0819:PsiDirectoryNode" />
               <item name="vendor" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="poller" type="b2602c69:ProjectViewProjectNode" />
-              <item name="poller" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -310,13 +294,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/priv/repo/migrations/20180305091436_create_answers.exs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="37" lean-forward="false" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/priv/repo/migrations/20180305100120_create_user_votes.exs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -667,10 +644,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/assets/vendor/js/bootstrap-material-design.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1227">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lib/poller_web/templates/layout/app.html.eex">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="570">
-          <caret line="75" column="124" lean-forward="false" selection-start-line="75" selection-start-column="124" selection-end-line="75" selection-end-column="124" />
+          <caret line="75" column="99" lean-forward="true" selection-start-line="75" selection-start-column="99" selection-end-line="75" selection-end-column="99" />
           <folding />
         </state>
       </provider>
@@ -678,7 +663,7 @@
     <entry file="file://$PROJECT_DIR$/assets/brunch-config.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
-          <caret line="19" column="10" lean-forward="false" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
+          <caret line="19" column="47" lean-forward="false" selection-start-line="19" selection-start-column="47" selection-end-line="19" selection-end-column="47" />
           <folding />
         </state>
       </provider>
