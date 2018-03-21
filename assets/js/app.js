@@ -34,6 +34,8 @@ $(document).ready(function() {
         $(".home-page").height(height);
     });
 
+    window.new_poll_form = $("#newPollModal").html()
+
     // Set user's id to a variable in JS as this will be needed to make posts.
     window.user_id = $("#user_id").text();
 
@@ -45,42 +47,50 @@ $(document).ready(function() {
     });
 
     // New Poll Form, add filds dynamically.
-    let next = 1;
-    $(".add-more").click(function(e){
+    window.next = 1;
+    $("body").on('click', '.add-more', function(e){
         e.preventDefault();
-        var addto = "#field" + next;
-        var addRemove = "#field" + (next);
-        if(next == 6) {
+        var addto = "#field" + window.next;
+        var addRemove = "#field" + (window.next);
+        if(window.next == 6) {
             $("#answer_limit_reached").removeClass("d-none")
             return
         }
-        next = next + 1;
-        var newIn = '<input autocomplete="off" class="input" id="field' + next + '" name="answers[]" type="text">';
+        window.next = window.next + 1;
+        var newIn = '<input autocomplete="off" class="input" id="field' + window.next + '" name="answers[]" type="text">';
         var newInput = $(newIn);
-        var removeBtn = '<button id="remove' + (next - 1) + '" class="btn btn-danger remove-me" >-</button></div><div id="field">';
+        var removeBtn = '<button id="remove' + (window.next - 1) + '" class="btn btn-danger remove-me" >-</button></div><div id="field">';
         var removeButton = $(removeBtn);
         $(addto).after(newInput);
         $(addRemove).after(removeButton);
-        $("#field" + next).attr('data-source',$(addto).attr('data-source'));
-        $("#count").val(next);  
-            $('.remove-me').click(function(e){
-                e.preventDefault();
-                var fieldNum = this.id.charAt(this.id.length-1);
-                var fieldID = "#field" + fieldNum;
-                $(this).remove();
-                $(fieldID).remove();
-            });
+        $("#field" + window.next).attr('data-source',$(addto).attr('data-source'));
+        $("#count").val(window.next);
+    });
+
+    $('body').on('click',".remove-me", function(e){
+        e.preventDefault();
+        var fieldNum = this.id.charAt(this.id.length-1);
+        var fieldID = "#field" + fieldNum;
+        $(this).remove();
+        $(fieldID).remove();
+        window.next = window.next - 1;
     });
 
     // Save poll form
-    $("#save-poll").on('click', function() {
-        // TODO also append a new card to the starting of the div of cards and may be animate this as well.
-        // TODO also get tags from the Web UI
+    $("body").on('click','#save-poll', function() {
         var values = $("#new_poll").serializeArray()
-        $.get('/new_poll', values).then(function(data) {
-            $("#newPollModal").addClass('animated fadeOutDown');
-            $("[data-dismiss=modal]").trigger({ type: "click" });
-            $("#newPollModal").removeClass('animated fadeOutDown');
-        })
+        $.get('/new_poll', values)
+            .done(function(data) {
+                let jsonResponse = $.parseJSON(data);
+                if(jsonResponse.status == "success") {
+                    $("#newPollModal").html($(new_poll_form));
+                    $("#newPollModal").addClass('animated fadeOutDown');
+                    $("[data-dismiss=modal]").trigger({ type: "click" });
+                    $("#newPollModal").removeClass('animated fadeOutDown');
+                    window.next = 1;
+                } else {
+                    alert("Could not create poll")
+                }
+            })
     });
 });

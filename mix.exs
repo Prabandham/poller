@@ -4,7 +4,7 @@ defmodule Poller.Mixfile do
   def project do
     [
       app: :poller,
-      version: "1.0.1",
+      version: "1.0.2",
       elixir: "~> 1.5.0",
       elixirc_paths: elixirc_paths(Mix.env()),
       compilers: [:phoenix, :gettext] ++ Mix.compilers(),

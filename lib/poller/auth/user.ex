@@ -42,16 +42,16 @@ defmodule Poller.Auth.User do
     |> generate_hash_password
   end
 
+  def validate(nil, _), do: {:error, "Invalid Login credentials"}
+  def validate("", _), do: {:error, "Invalid Login credentials"}
   def validate(login, password) do
     login = String.downcase(login)
 
-    user =
-      User
-      |> Ecto.Query.where(email: ^login)
-      |> Ecto.Query.or_where(username: ^login)
-      |> Poller.Repo.one()
-
-    Comeonin.Argon2.check_pass(user, password, hash_key: :hash_password)
+    User
+    |> Ecto.Query.where(email: ^login)
+    |> Ecto.Query.or_where(username: ^login)
+    |> Poller.Repo.one()
+    |> Comeonin.Argon2.check_pass(password, hash_key: :hash_password)
   end
 
   defp generate_hash_password(changeset) do
